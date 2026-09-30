@@ -8,6 +8,7 @@
     --corPrincipal: #fff4f4;
     --fonteHanken: "Hanken Grotesk", sans-serif;
     --corDourado: #c5a028;
+    --corSecundaria: #fdf8f8;
 }
 
 .container{
@@ -159,7 +160,7 @@ form{
 
 .input_form{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     max-width: 1200px;
 }
@@ -179,8 +180,15 @@ form{
 
 .form_coluna1,
 .form_coluna2{
-    width: 414px;
+    max-width: 414px;
+    width: 45%;
 }
+
+
+
+
+
+
 
 .input_img span,
 form label{
@@ -188,7 +196,7 @@ form label{
     text-transform: uppercase;
     color: #444444;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
@@ -231,14 +239,24 @@ form input[type=text]{
     height: 25px;
 }
 
+.input_cat{
+    width: 79%;
+}
+
 .input_cat input{
-    width: 314px;
+    max-width: 314px;
     margin-right: 20px;
+}
+
+/* width 314px alterado para max-width 314px */
+
+.input_valor{
+    width: 91%;
 }
 
 .input_valor input{
     margin-right: 20px;
-    width: 360px;
+    max-width: 360px;
 }
 
 form input[type=button]{
@@ -249,14 +267,39 @@ form input[type=button]{
     text-transform: uppercase;
     font-family: var(--fonteHanken);
     border: none;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
-    height: 50px;
-    width: 150px;
-    letter-spacing: 3px;
-
+    letter-spacing: 1px;
+    padding: 16px 55px;
+    cursor: pointer;
 }
 
+
+/* ......................Liata de Produtos............................*/
+.list_produtos{
+    background-color: var(--corSecundaria);
+}
+
+table{
+    background-color: aquamarine;
+    width: 100%;
+    font-family: var(--fonteHanken);
+    text-transform: uppercase;
+}
+
+thead{
+    font-weight: 600;
+    font-size: 12px;
+    color: #444444;
+}
+
+tbody{
+    color: #aaaaaa;
+}
+
+table svg{
+    width: 35px;
+}
 
 
 
@@ -288,4 +331,24 @@ form input[type=button]{
         margin-bottom: 4px;
         width: 70%;
     }
+
+    .input_form{
+        display: block;
+    }
+
+
+/* ...........................FOTMULARIO.................................. */
+
+    .input_form{
+    flex-direction: column;   
+    align-items: center;    
+}
+
+.form_coluna1,
+.form_coluna2{
+    max-width: 500px;
+    width: 80%;
+}
+
+
 }

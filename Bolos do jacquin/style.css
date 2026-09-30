@@ -153,7 +153,7 @@ h1{
 .home_subtitulo span{
     font-size: 32px;
     position: absolute;
-    bottom:-10;
+    bottom:-10px;
     margin-bottom: 0 auto;
 }
 

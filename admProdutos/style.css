@@ -278,19 +278,24 @@ form input[type=button]{
 /* ......................Liata de Produtos............................*/
 .list_produtos{
     background-color: var(--corSecundaria);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* padding: 50px 0*/
 }
 
 table{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 100%;
     font-family: var(--fonteHanken);
     text-transform: uppercase;
+    border-collapse: collapse;
 }
 
 thead{
     font-weight: 600;
     font-size: 12px;
     color: #444444;
+    text-align: left;
 }
 
 tbody{
@@ -299,9 +304,13 @@ tbody{
 
 table svg{
     width: 35px;
+    color: #bd0000;
 }
 
-
+tr, td{
+    border-bottom: solid 1px #444444;
+    padding: 5px 10px;
+}
 
 
 
@@ -335,6 +344,7 @@ table svg{
     .input_form{
         display: block;
     }
+    
 
 
 /* ...........................FOTMULARIO.................................. */
@@ -351,4 +361,100 @@ table svg{
 }
 
 
+
+/* ...............................TABELA........................... */
+
+thead{
+    display: none;
+}
+
+tbody tr{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #444444;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: #00000052 5px 5px 5px;
+    max-width: 500px;
+    margin: 0 auto 50px; 
+}
+
+tbody td{
+    border: none;
+}
+
+tbody td::before{
+    content: attr(data-cell) ": ";
+    font-size: 12px;
+    color: #444444;
+}
+
+
+
+/* .........................FOOTER........................................ */
+footer{
+    height: 300px;
+    display: flex;  
+}
+
+.footer_container{
+    flex-direction: column;
+    max-width: 450px;
+    height: 250px;
+    justify-content: space-around;
+}
+
+.footer_container span{
+    font-size: 12px;
+    order: 3;
+}
+
+.footer nav a{
+    font-size: 12px;
+    order: 1;
+}
+
+.foter img{
+    order: 2;
+}
+
+
+
+}
+
+
+/* .................FOOTER.................. */
+
+footer {
+    background-color: #fff4f4;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    /* width: 100px; */
+    justify-content: center;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    background-color: #fff4f4;
+    width: 1200px;
+}
+
+.nav_footer{
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.footer_container span,
+.nav_footer a{
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+.nav_footer a{
+    text-decoration: none;
+    color: #747878;
 }
